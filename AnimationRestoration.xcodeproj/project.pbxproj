@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2EA1DA391E96E26B00255843 /* AnimationPreservingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA1DA381E96E26B00255843 /* AnimationPreservingView.swift */; };
+		2EA1DA3B1E96E2A700255843 /* ObjectAssociation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EA1DA3A1E96E2A700255843 /* ObjectAssociation.swift */; };
 		2ECCB76F1E96C01F00CD12C6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ECCB76E1E96C01F00CD12C6 /* AppDelegate.swift */; };
 		2ECCB7711E96C01F00CD12C6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ECCB7701E96C01F00CD12C6 /* ViewController.swift */; };
 		2ECCB7741E96C01F00CD12C6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2ECCB7721E96C01F00CD12C6 /* Main.storyboard */; };
@@ -15,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2EA1DA381E96E26B00255843 /* AnimationPreservingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationPreservingView.swift; sourceTree = "<group>"; };
+		2EA1DA3A1E96E2A700255843 /* ObjectAssociation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectAssociation.swift; sourceTree = "<group>"; };
 		2ECCB76B1E96C01F00CD12C6 /* AnimationRestoration.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AnimationRestoration.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2ECCB76E1E96C01F00CD12C6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2ECCB7701E96C01F00CD12C6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -54,6 +58,8 @@
 		2ECCB76D1E96C01F00CD12C6 /* AnimationRestoration */ = {
 			isa = PBXGroup;
 			children = (
+				2EA1DA3A1E96E2A700255843 /* ObjectAssociation.swift */,
+				2EA1DA381E96E26B00255843 /* AnimationPreservingView.swift */,
 				2ECCB76E1E96C01F00CD12C6 /* AppDelegate.swift */,
 				2ECCB7701E96C01F00CD12C6 /* ViewController.swift */,
 				2ECCB7721E96C01F00CD12C6 /* Main.storyboard */,
@@ -136,7 +142,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2EA1DA391E96E26B00255843 /* AnimationPreservingView.swift in Sources */,
 				2ECCB7711E96C01F00CD12C6 /* ViewController.swift in Sources */,
+				2EA1DA3B1E96E2A700255843 /* ObjectAssociation.swift in Sources */,
 				2ECCB76F1E96C01F00CD12C6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -301,6 +309,7 @@
 				2ECCB77F1E96C01F00CD12C6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
