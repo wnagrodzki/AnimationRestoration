@@ -1,14 +1,56 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="arA-pA-QXC">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Item 2-->
+        <scene sceneID="rlK-xl-HtJ">
+            <objects>
+                <viewController id="vd8-Xz-KZh" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="3gh-En-2DO"/>
+                        <viewControllerLayoutGuide type="bottom" id="vtr-m1-kkG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Nph-X3-c5G">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 2" id="2gp-7W-iBP"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V0W-y1-zWe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-460" y="239"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="7mh-yO-YDw">
+            <objects>
+                <tabBarController id="arA-pA-QXC" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="9fM-gf-zXr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="761-mD-1Eh"/>
+                        <segue destination="vd8-Xz-KZh" kind="relationship" relationship="viewControllers" id="f94-63-a7b"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="w9z-HX-tbn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1410" y="-107"/>
+        </scene>
+        <!--Item-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AnimationRestoration" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +58,81 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IDh-F8-2CN" customClass="AnimationPreservingView" customModule="AnimationRestoration" customModuleProvider="target">
+                                <rect key="frame" x="16" y="20" width="343" height="281"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="With animation restoration" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yZE-y0-xgd">
+                                        <rect key="frame" x="70" y="8" width="202" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x7R-Cc-8WO">
+                                        <rect key="frame" x="111" y="80" width="120" height="120"/>
+                                        <color key="backgroundColor" red="0.40000000600000002" green="0.40000000600000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="120" id="BCE-Mb-SLS"/>
+                                            <constraint firstAttribute="width" constant="120" id="yZz-Mc-mMy"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="x7R-Cc-8WO" firstAttribute="centerX" secondItem="IDh-F8-2CN" secondAttribute="centerX" id="2oo-Pw-r7H"/>
+                                    <constraint firstItem="x7R-Cc-8WO" firstAttribute="centerY" secondItem="IDh-F8-2CN" secondAttribute="centerY" id="GWB-Nz-Qfq"/>
+                                    <constraint firstItem="yZE-y0-xgd" firstAttribute="top" secondItem="IDh-F8-2CN" secondAttribute="top" constant="8" id="alC-7C-Ri1"/>
+                                    <constraint firstItem="yZE-y0-xgd" firstAttribute="centerX" secondItem="IDh-F8-2CN" secondAttribute="centerX" id="fKf-ih-hQ8"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zqq-dx-TOw">
+                                <rect key="frame" x="16" y="317" width="343" height="281"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Without animation restoration" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SgP-Kf-aOw">
+                                        <rect key="frame" x="58" y="8" width="227" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fNn-UW-FJS">
+                                        <rect key="frame" x="111" y="81" width="120" height="120"/>
+                                        <color key="backgroundColor" red="0.40000000600000002" green="0.40000000600000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="120" id="Fp8-18-FPh"/>
+                                            <constraint firstAttribute="height" constant="120" id="dPs-7u-QKv"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="SgP-Kf-aOw" firstAttribute="centerX" secondItem="zqq-dx-TOw" secondAttribute="centerX" id="Sme-iJ-oXf"/>
+                                    <constraint firstItem="SgP-Kf-aOw" firstAttribute="top" secondItem="zqq-dx-TOw" secondAttribute="top" constant="8" id="Zrh-fu-rcM"/>
+                                    <constraint firstItem="fNn-UW-FJS" firstAttribute="centerY" secondItem="zqq-dx-TOw" secondAttribute="centerY" id="foF-2S-PRm"/>
+                                    <constraint firstItem="fNn-UW-FJS" firstAttribute="centerX" secondItem="zqq-dx-TOw" secondAttribute="centerX" id="wWp-ia-MpA"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="zqq-dx-TOw" firstAttribute="height" secondItem="IDh-F8-2CN" secondAttribute="height" id="6Yh-o2-2sL"/>
+                            <constraint firstItem="zqq-dx-TOw" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="CTB-vl-RXQ"/>
+                            <constraint firstItem="IDh-F8-2CN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Jda-rb-igY"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="zqq-dx-TOw" secondAttribute="bottom" constant="20" id="P1J-0X-pv5"/>
+                            <constraint firstItem="IDh-F8-2CN" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="VXA-qG-S6v"/>
+                            <constraint firstItem="zqq-dx-TOw" firstAttribute="top" secondItem="IDh-F8-2CN" secondAttribute="bottom" constant="16" id="Zob-TU-tgb"/>
+                            <constraint firstItem="zqq-dx-TOw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="hbX-0H-fzx"/>
+                            <constraint firstItem="IDh-F8-2CN" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="rtB-Fb-72r"/>
+                        </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="bme-Rw-KQg"/>
+                    <connections>
+                        <outlet property="viewA" destination="x7R-Cc-8WO" id="PQL-uD-wrP"/>
+                        <outlet property="viewB" destination="fNn-UW-FJS" id="y0S-nQ-1LN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-460" y="-415"/>
         </scene>
     </scenes>
 </document>
